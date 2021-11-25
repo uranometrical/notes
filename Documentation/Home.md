@@ -6,3 +6,6 @@ The usage of this information, as well as contributing to this wiki, means you a
 
 ## What's all the info?
 Almost everything can be found in various pages accessed through our [modification index](Modifications).
+
+## Contributing
+See: [CONTRIBUTING.md](https://github.com/Uranometrical/notes/blob/master/CONTRIBUTING.md).
