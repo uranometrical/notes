@@ -1,6 +1,6 @@
 # Mixin Client Distribtuon
-- SpongePowered Mixins: https://www.lunarclient.com/
-- Original Form Post: 1.7, 1.8, 1.12, 1.16, 1.17, 1.18 (Snapshots)
+- SpongePowered Mixins: https://github.com/SpongePowered/Mixin
+- Original Forum Post: https://hypixel.net/threads/screw-mcp-heres-a-quick-mixin-client-distribution-tutorial.4658725
 - Prequisites: Basic understanding of mixin functionality and Gradle.
 - See also: [Plunge](https://github.com/Uranometrical/plunge), a `Newtonsoft.Json`-based C# .NET 5.0 library for parsing launcher data.
 
