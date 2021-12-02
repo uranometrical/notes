@@ -8,3 +8,4 @@ Index of all documented Minecraft modifications.
 ### Fabric Mods
 
 ### Misc. Information
+- [Mixin Client Distribution](Mixin-Client-Distribution) - How to safely distribute your mixin-based Minecraft client.
