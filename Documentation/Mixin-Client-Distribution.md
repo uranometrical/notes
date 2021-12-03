@@ -8,7 +8,7 @@
 Long have players had to deal with MCP-based clients, but that is no longer an issue!
 Long gone are the days of EULA-infringing client distributon and unintentionally-encourged piracy.
 
-This article covers how to distribute a mixin-basec client using only the `.jar` file containing the mixin classes. It servers the purpose of showing legal distribution that does not expose or distribute the Minecraft source code. This is for the defualt Minecraft launcher.
+This article covers how to distribute a mixin-based client using only the `.jar` file containing the mixin classes. It serves the purpose of showing a method of legal distribution that does not expose or distribute the Minecraft source code. This is for the defualt Minecraft launcher.
 
 **This guide does not cover automation of the instructions given, it is written with an informative intent.
 You will have to programmatically implement this yourself.**
