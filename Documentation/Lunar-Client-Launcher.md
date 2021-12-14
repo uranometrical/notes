@@ -43,6 +43,8 @@ publisherName:
 ### `renderer.js`
 `renderer.js` is the real "meat and potatoes", so to speak. It contains much of the core functionality of the launcher, as well as constructing the elements used for displaying pages.
 
+The consistent user-agent used by the launcher is `Lunar Client Launcher v{Launcher App Version}`.
+
 #### Blog Posts
 Properties:
 * `title`, `string`.
@@ -60,5 +62,55 @@ Head textures are retrieved automatically.
 4. The "Read more" button, which will open a browser window pointing to the link given.
 
 The title property isn't featured here since it is only displayed as the alternate text display, not intended to normally be seen.
+
+#### Folders & Files
+The launcher shares numerous folder and file locations with the actual client.
+
+It cares about:
+* `.lunarclient/settings/`
+* `.lunarclient/jre/`
+* `.lunarclient/offline/`
+* `.lunarclient/textures/`
+* `.lunarclient/launcher-cache/`
+* `.lunarclient/licenses`
+
+In the `luancher-cache` folder lies a text file called `hwid-private-do-not-share`, which contains a generated hardware ID used by the client, which is included in web requests.
+
+The hardware ID is a string composed of 512 characters, and contains a randomized combination of the characters `0-9A-Za-z`.
+
+#### Web Requests
+The API endpoint is `https://api.lunarclientprod.com/launcher/`.
+
+##### Report Launch Status
+* Endpoint: `/reportLaunchStatus`
+* Method: `POST`
+* Headers:
+  * `User-Agent`: Standard
+* Body:
+  * JSON file of the following:
+    * `hwid`: machineIDsync
+    * `hwid-private`: Hardware ID as specified above in `Folders & Files`.
+    * `os`: Your platform;
+    * `arch`: Your process architecture.
+    * `launcher_version`: The launcher version.
+    * `success`: Determined by a passed parameter. True of launched successfully, otherwise false.
+    * `data`: Determined by a passed parameter. Not sure what this is for.
+
+##### Launch
+* Endpoint: `/launch`
+* Method: `POST`
+* Headers:
+  * `User-Agent`: Standard
+* Body:
+  * JSON file of the following:
+    * `hwid`: machineIDsync
+    * `hwid-private`: Hardware ID as specified above in `Folders & Files`.
+    * `os`: Your platform;
+    * `arch`: Your process architecture.
+    * `launcher_version`: The launcher version.
+    * `version`: The ID of a larger JSON object, i.e. `1.8`. Further documentation required.
+    * `branch`: The currently-selected branch (experimental options).
+    * `launch_type`: Typically `OFFLINE`, never seen it as anything else. Unsure of its purpose.
+    * `classifier`: The classifier, such as `optifine` if OptiFine is running.
 
 ### `styles.css`
