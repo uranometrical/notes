@@ -53,7 +53,7 @@ Properties:
 
 Head textures are retrieved automatically.
 
-![&lt;image of blog post anatomy&gt;][https://loli.tomat.dev/%E2%80%8D%E2%80%8C%E2%80%8D%E2%80%8B%E2%80%8C%E2%81%A0%E2%80%8B%E2%80%8B/direct.png]
+![&lt;image of blog post anatomy&gt;](https://loli.tomat.dev/%E2%80%8D%E2%80%8C%E2%80%8D%E2%80%8B%E2%80%8C%E2%81%A0%E2%80%8B%E2%80%8B/direct.png)
 1. The author text, which has a head texture retrieved automatically (based on username, works with any username).
 2. The image, which gets displayed based on the url given.
 3. The excerpt, which acts as a description.
