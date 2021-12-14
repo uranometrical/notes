@@ -6,3 +6,6 @@
 ## Articles
 ### [Lunar Tab List Display](Lunar-Client-Tab-List-Display)
 A short article documenting how to programmatically detect if a user is on Lunar Client, and the generalized steps to take to display an icon next to their name the same way Lunar does.
+
+### [Lunar Client Launcher](Lunar-Client-Launcher)
+Comprehensive documentation of the inner-workings of the Lunar Client Launcher,
