@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    #
+# Additional steps to generate documentation in "Documentation" directory
     steps:
       - uses: actions/checkout@v1
 
