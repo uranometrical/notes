@@ -8,6 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+
       - name: Upload Documentation to Wiki
         uses: SwiftDocOrg/github-wiki-publish-action@v1
         with:
