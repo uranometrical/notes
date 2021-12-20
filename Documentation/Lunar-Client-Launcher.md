@@ -78,6 +78,24 @@ In the `luancher-cache` folder lies a text file called `hwid-private-do-not-shar
 
 The hardware ID is a string composed of 512 characters, and contains a randomized combination of the characters `0-9A-Za-z`.
 
+#### Error Throwing
+The launcher will record thrown exceptions and will aid you in handling some of them.
+
+##### Out-of-Memory Errors
+If the exception contains a message stating "Could not reerve enough space for object heap", "Could not reserve enough space for" <!-- yes, it ends here -->, or "bitmaps for parallel garbage collection for the requested", the luancher will assume your game ran out of memory and will recommend you to allocate more.
+
+If the exception contains "org.lwjgl.LWJGLException: Pixel format not accelerated", it will tell you to visit https://lunarclient.com/pixel-format.
+
+If the exception does not fit either of these, the launcher will record the data and send it to Lunar's servers automatically. If it fits one of these above exceptions, it will not send a report.
+
+JSON data sent upon launch failure:
+* `type`:
+* `timeToInit`: Initialization time.
+* `timeToStarted:` Start time.
+* `os`: Your platform.
+* `version`: The game version, short-form (1.8, 1.7, 1.16, etc.).
+* `logs`: The most relevant 100 lines of logging.
+
 #### Web Requests
 The API endpoint is `https://api.lunarclientprod.com/launcher/`.
 
@@ -94,7 +112,7 @@ The API endpoint is `https://api.lunarclientprod.com/launcher/`.
     * `arch`: Your process architecture.
     * `launcher_version`: The launcher version.
     * `success`: Determined by a passed parameter. True of launched successfully, otherwise false.
-    * `data`: Determined by a passed parameter. Not sure what this is for.
+    * `data`: Determined by a passed parameter. The purpose can vary.
 
 ##### Launch
 * Endpoint: `/launch`
@@ -112,5 +130,7 @@ The API endpoint is `https://api.lunarclientprod.com/launcher/`.
     * `branch`: The currently-selected branch (experimental options).
     * `launch_type`: Typically `OFFLINE`, never seen it as anything else. Unsure of its purpose.
     * `classifier`: The classifier, such as `optifine` if OptiFine is running.
+
+##### Download Licenses
 
 ### `styles.css`
