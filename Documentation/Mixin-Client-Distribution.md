@@ -1,3 +1,6 @@
+---
+title: Mixin Client Distribution
+---
 # Mixin Client Distribtuon
 - SpongePowered Mixins: https://github.com/SpongePowered/Mixin
 - Original Forum Post: https://hypixel.net/threads/screw-mcp-heres-a-quick-mixin-client-distribution-tutorial.4658725

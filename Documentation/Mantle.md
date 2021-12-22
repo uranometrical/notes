@@ -1,3 +1,6 @@
+---
+title: Mantle
+---
 # Mantle
 - Website: https://mantle.gg/
 - Supported Versions: All

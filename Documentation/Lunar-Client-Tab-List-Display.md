@@ -1,3 +1,6 @@
+---
+title: Lunar Client Tab List Display
+---
 # Lunar Tab List Display
 A short article documenting how to programmatically detect if a user is on Lunar Client, and the generalized steps to take to display an icon next to their name the same way Lunar does.
 

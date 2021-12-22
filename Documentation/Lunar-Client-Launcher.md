@@ -1,3 +1,6 @@
+---
+title: Lunar Client Launcher Documentation
+---
 # Lunar Client Launcher Documentation
 - Get the Lunar Client launcher here: https://www.lunarclient.com/download
 

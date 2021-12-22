@@ -1,3 +1,6 @@
+---
+title: Lunar Client
+---
 # Lunar Client
 - Website: https://www.lunarclient.com/
 - Supported Versions: 1.7, 1.8, 1.12, 1.16, 1.17, 1.18

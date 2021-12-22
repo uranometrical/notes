@@ -1,3 +1,6 @@
+---
+title: Modifications
+---
 Index of all documented Minecraft modifications.
 
 ### Clients
