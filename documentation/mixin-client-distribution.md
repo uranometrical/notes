@@ -1,5 +1,6 @@
 ---
 title: Mixin Client Distribution
+messy: true
 ---
 # Mixin Client Distribtuon
 - SpongePowered Mixins: https://github.com/SpongePowered/Mixin

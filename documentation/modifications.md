@@ -1,5 +1,6 @@
 ---
 title: Modifications
+glossary: true
 ---
 Index of all documented Minecraft modifications.
 

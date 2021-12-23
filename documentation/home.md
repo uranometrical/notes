@@ -1,5 +1,6 @@
 ---
 title: Home
+entrypoint: true
 ---
 # Welcome
 Welcome to `uranometrical/notes`, a community-sourced compendium of information regarding compatibility, inner workings, and the reverse-engineering of other Minecraft PvP clients and modifications, compiled with the sole aim of improving the end-user experience through the fair integration of different features and experiences.
