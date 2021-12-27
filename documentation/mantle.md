@@ -1,5 +1,6 @@
 ---
 title: Mantle
+lastUpdated: "27 December 2021"
 ---
 # Mantle
 - Website: https://mantle.gg/

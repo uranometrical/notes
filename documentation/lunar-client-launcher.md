@@ -3,6 +3,7 @@ title: Lunar Client Launcher Documentation
 wip: true
 stub: true
 messy: true
+lastUpdated: "27 December 2021"
 ---
 # Lunar Client Launcher Documentation
 - Get the Lunar Client launcher here: https://www.lunarclient.com/download

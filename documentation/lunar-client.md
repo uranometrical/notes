@@ -1,6 +1,7 @@
 ---
 title: Lunar Client
 wip: true
+lastUpdated: "27 December 2021"
 ---
 # Lunar Client
 - Website: https://www.lunarclient.com/

@@ -1,6 +1,7 @@
 ---
 title: Modifications
 glossary: true
+lastUpdated: "27 December 2021"
 ---
 Index of all documented Minecraft modifications.
 

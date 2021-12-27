@@ -1,6 +1,7 @@
 ---
 title: Mixin Client Distribution
 messy: true
+lastUpdated: "27 December 2021"
 ---
 # Mixin Client Distribtuon
 - SpongePowered Mixins: https://github.com/SpongePowered/Mixin
