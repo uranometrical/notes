@@ -8,34 +8,34 @@ messy: true
 - Get the Lunar Client launcher here: https://www.lunarclient.com/download
 
 ## Introduction
-Lunar Client's launcher is an Electron-based application used to launch Lunar Client.
+The *Lunar Client launcher* (from here on out, "LCL"), is an Electron-based TypeScript program developed under the React framework, transpiled to raw JavaScript.
 
-It has numerous functions, mainly asset downloading and handling certain Lunar tasks, as well as managing hardware IDs and the like.
+LCL serves several major functions:
+* Downloading assets for Lunar to use.
+* Verifying the integrity of asset files.
+* Updating and maintaining the JVM Lunar uses as well as Lunar itself.
+* Blocking access to the client in case of something such as a HWID ban.
 
 ## Documentation
-The launcher is heavily obfuscated; however, the obfuscation appears to not change (at least not heavily) between versions.
+LCL's source code is difficulty to navigate due to two reasons: firstly, it is heavily obfuscated, secondly, it is transpiled from TSX, a combination of TypeScript and JSX, which both already compile into harder-to-read JavaScript that is not intended to actually be observed by developers.
 
-All code is stored in `/resources/app.asar`, which can be unpacked using a multitude of different tools that have been developed overtime.
+Assuming you are in the root directory of the launcher, all code is stored in `/resources/app.asar`, which can be unpacked using a multitude of different tools that have been developed overtime.
 
-The launcher was develped in TypeScript and transpiled to JavaScript, which we can tell thanks to the `.map` files supplied.
-
-All the JavaScript is compiled to two files, which can make the code difficult to decipher.
+Documented below are the various packaged files and their functions, as long as notable contents within. This documentation includes API requests and functionality of certain core methods.
 
 ### `main.js`
-`main.js` contains minimal JavaScript, essentially an `index.js` that handles the launching and some patth organization.
+`main.js` contains minimal code, essentially an `index.js`-esque file that handles the launching and some path organization.
 
-It handles setting up the menu pages as well as constructing the window and initializing Electron settings.
-
-The auto-updater is also handled here.
+It handles setting up the menu pages as well as constructing the window and instantiating Electron. The auto-updater is handled here as well.
 
 #### Auto-Updater
-Lunar's auto-updater uses the `electron-builder` [`autoUpdater`](https://www.electron.build/auto-update.html).
+LCL's auto-updater uses the `electron-builder` [`autoUpdater`](https://www.electron.build/auto-update.html). It is important to note that the LCL auto-updater is for the launcher itself. The launcher internally handles updating Lunar Client elsewhere.
 
-* Feed URL: `Deprecated. Do not use it.`
-* Request Headers:
-  * `User-Agent`: `Lunar Client Launcher v{Launcher App Version}`
+~~* Feed URL: `Deprecated. Do not use it.`~~ Documentation of this is questionable. The `electron-builder` library deprecates this away.
+~~* Request Headers:~~ See above.
+  ~~* `User-Agent`: `Lunar Client Launcher v{Launcher App Version}`~~
 
-`app-update.yml`:
+Contents of `app-update.yml`, which are used by `electron-builder`:
 ```yml
 provider: generic
 url: https://launcherupdates.lunarclientcdn.com
@@ -45,29 +45,68 @@ updaterCacheDirName: lunarclient-updater
 publisherName:
   - Moonsworth, LLC
 ```
+The given `url` value is the source of installer packages.
 
 ### `renderer.js`
-`renderer.js` is the real "meat and potatoes", so to speak. It contains much of the core functionality of the launcher, as well as constructing the elements used for displaying pages.
+The `renderer.js` file contains much of the core functionality of the program, outside of the initial launch sequence.
 
-The consistent user-agent used by the launcher is `Lunar Client Launcher v{Launcher App Version}`.
+#### Defining Variables
+Before specific information is presented, consider understanding various variables that will be thrown around to lessen boilerplate and repetetiveness:
+* The consistent user-agent used by the launcher is `Lunar Client Launcher v{Launcher App Version}`.
+* The root Lunar Client API endpoint is `https://api.lunarclientprod.com/launcher/`.
+
+Furthermore, JSON objects are defined in the following format:
+```json
+{
+  "object": "description of value, as well as type",
+  "other object [optional]": "if an object is annotated with \"[optional]\", it means that it is not always specified",
+  "etc": {
+    "if an object is written like this": {
+      "that means that it is a collection, such as an array, list, or dictionary"
+    }
+  }
+}
+```
+
+Take, for example, the `blogPost` JSON format:
+```json
+{
+  "title": "The title of the blog post (only displayed if an image fails to load), string",
+  "author": "The Minecraft username of the author, string",
+  "image": "A link to an image which is displayed, string (uri format)",
+  "excerpt": "The blog post's description, string",
+  "link": "The link to open when \"Read more\" is pressed, string"
+}
+```
+
+Now that everything is covered, please continue.
 
 #### Blog Posts
-Properties:
-* `title`, `string`.
-* `author`, `string`.
-* `image`, `string`.
-* `excerpt`, `string`.
-* `link`, `string`.
+Blog posts are the three tiled images that appear under the "Recent News" header in the LCL.
+![&lt;image of blog posts&gt;](https://ass.tomat.dev/%E2%80%8D%E2%80%8D%E2%80%8B%E2%80%8C%E2%80%8C%E2%80%8B%E2%80%8C%E2%80%8B/direct.png)
 
-Head textures are retrieved automatically.
-
+Pictured below is the anatomy of a blog post:
 ![&lt;image of blog post anatomy&gt;](https://loli.tomat.dev/%E2%80%8D%E2%80%8C%E2%80%8D%E2%80%8B%E2%80%8C%E2%81%A0%E2%80%8B%E2%80%8B/direct.png)
-1. The author text, which has a head texture retrieved automatically (based on username, works with any username).
-2. The image, which gets displayed based on the url given.
+1. The "author" text, which has a head texture retrieved automatically (based on username, works with any username).
+2. The image, which gets displayed based on the supplied image url.
 3. The excerpt, which acts as a description.
 4. The "Read more" button, which will open a browser window pointing to the link given.
 
 The title property isn't featured here since it is only displayed as the alternate text display, not intended to normally be seen.
+
+##### JSON Format
+```json
+{
+  "title": "The title of the blog post (only displayed if an image fails to load), string",
+  "author": "The Minecraft username of the author, string",
+  "image": "A link to an image which is displayed, string (uri format)",
+  "excerpt": "The blog post's description, string",
+  "link": "The link to open when \"Read more\" is pressed, string"
+}
+```
+This JSON is supplied alongside numerous other entries in a larger JSON file. More information further below.
+
+<!-- This is as far as the rewrite currently goes. -->
 
 #### Folders & Files
 The launcher shares numerous folder and file locations with the actual client.
