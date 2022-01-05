@@ -1,7 +1,7 @@
 ---
-title: Modifications
+title: Modification Glossary
 glossary: true
-lastUpdated: "27 December 2021"
+lastUpdated: "4 January 2022"
 ---
 Index of all documented Minecraft modifications.
 
@@ -14,6 +14,9 @@ Index of all documented Minecraft modifications.
 
 ### Independent Mods
 - [Mantle](Mantle) - The leading alternative OptiFine cape server.
+
+### Proposals
+- [Automatic Lunar Client Deobfuscation](automatic-lunar-deobf) - A proposal for creating self-preserving Lunar Client mappings.
 
 ### Misc. Information
 - [Mixin Client Distribution](Mixin-Client-Distribution) - How to safely distribute your mixin-based Minecraft client.
