@@ -16,7 +16,7 @@ Index of all documented Minecraft modifications.
 - [Mantle](Mantle) - The leading alternative OptiFine cape server.
 
 ### Proposals
-- [Automatic Lunar Client Deobfuscation](automatic-lunar-deobf) - A proposal for creating self-preserving Lunar Client mappings.
+- [Automatic Lunar Client Deobfuscation](automatic-lunar-deobf-revised) - A proposal for creating self-preserving Lunar Client mappings.
 
 ### Misc. Information
 - [Mixin Client Distribution](Mixin-Client-Distribution) - How to safely distribute your mixin-based Minecraft client.
