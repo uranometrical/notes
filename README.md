@@ -1,4 +1,4 @@
 # notes
-Public domain, reverse-engineered documentation of Minecraft-related projects, mainly in relation to the PvP community. Things focused on here include Lunar Client, Mantle, tutorials in relation to mixins/distribtuon, proposals, and more.
+Public domain, often reverse-engineered documentation of software utilized by the Minecraft PvP community. Focuses include: Lunar Client, Mantle, Mixin tutorials, idea proposals, and more.
 
-Originally this was hosted on the GitHub repository's wiki, but it has since been moved to [my website](https://tomat.dev/projects/uranometrical-notes/home) in order to make use of richer formatting and YAML metadata.
+You can view the pages with rich formatting and metadata [here](https://tomat.dev/projects/uranometrical-notes/home). See the bleeding-edge information [here](https://konata.tomat.dev/projects/mc/notes/home), alternatively (until I merge my website's rewrite upstream).
