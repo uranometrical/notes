@@ -1,6 +1,7 @@
 ---
 title: Home
 entrypoint: true
+lastUpdated: "25 January 2022"
 ---
 # Welcome
 Welcome to [uranometrical/notes](https://github.com/uranometrical/notes), a community-driven wiki containing numerous articles relating to software used by the Minecraft PvP community.
