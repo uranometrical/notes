@@ -84,7 +84,6 @@ Now that everything is covered, please continue.
 
 #### Blog Posts
 Blog posts are the three tiled images that appear under the "Recent News" header in the LCL.
-![&lt;image of blog posts&gt;](https://ass.tomat.dev/%E2%80%8D%E2%80%8D%E2%80%8B%E2%80%8C%E2%80%8C%E2%80%8B%E2%80%8C%E2%80%8B/direct.png)
 
 Pictured below is the anatomy of a blog post:
 ![&lt;image of blog post anatomy&gt;](https://loli.tomat.dev/%E2%80%8D%E2%80%8C%E2%80%8D%E2%80%8B%E2%80%8C%E2%81%A0%E2%80%8B%E2%80%8B/direct.png)
