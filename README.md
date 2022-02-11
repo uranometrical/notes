@@ -1,4 +1,11 @@
 # notes
-Public domain, often reverse-engineered documentation of software utilized by the Minecraft PvP community. Focuses include: Lunar Client, Mantle, Mixin tutorials, idea proposals, and more.
+An encyclopedia for Minecraft modding and mixins, with a heavy focus on "player versus player" software.
 
-You can view the pages with rich formatting and metadata [here](https://tomat.dev/projects/mc/notes/en/home).
+All original information is released to the public domain, and most information has been manually reverse-engineered.
+
+Focused topics include Lunar Client, Mantle, SpongePowered Mixins, and client development.
+
+View the website [here](https://tomat.dev/projects/mc/notes/en/home).
+
+# Translating
+*Todo*.
